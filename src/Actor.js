@@ -12,8 +12,10 @@ const StyedActor = styled.div`
   flex-direction: column;
 
   .back-btn {
-    margin-left: auto;
-    align-self: flex-start;
+    /* margin-left: auto; */
+    align-self: center;
+    margin-bottom: 2rem;
+
     Button {
       margin: 0;
     }
@@ -22,15 +24,16 @@ const StyedActor = styled.div`
     margin: auto;
     padding-top: 3rem;
     display: flex;
+    flex-direction: column-reverse;
 
     .actor-info {
       width: 20rem;
-      margin: 0 3rem;
       display: flex;
       flex-direction: column;
       color: #fff;
       border-top: 1px solid gray;
       border-bottom: 1px solid gray;
+      margin-bottom: 2rem;
 
       .actor-name {
         font-size: 1.1rem;
@@ -49,6 +52,7 @@ const StyedActor = styled.div`
       background-color: #000;
       box-shadow: 0 9px 18px rgba(0, 0, 0, 0.5);
       align-self: flex-start;
+      margin: auto;
 
       .actor-img {
         width: 100%;
@@ -58,7 +62,19 @@ const StyedActor = styled.div`
       .replacer {
         width: 100%;
         height: 20rem;
-        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        /* background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+      }
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    .back-btn {
+      align-self: flex-start;
+    }
+    .actor-box {
+      flex-direction: row;
+      .actor-info {
+        margin: 0 3rem;
       }
     }
   }
