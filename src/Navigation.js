@@ -18,7 +18,7 @@ const Navbar = styled.nav`
   button {
     background-color: transparent;
     color: rgba(255, 255, 255, 0.3);
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     margin: 0 2rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -37,6 +37,10 @@ const Navbar = styled.nav`
     height: 5rem;
     flex-direction: row;
     justify-content: flex-end;
+
+    button {
+      font-size: 1.6rem;
+    }
   }
 `;
 

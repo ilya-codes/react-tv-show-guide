@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledLogo = styled.div`
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   cursor: pointer;
 
   .link {

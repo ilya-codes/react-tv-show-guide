@@ -11,7 +11,7 @@ import ShowsContext from "./ShowsContext";
 // import ShowMainDescription from "./ShowMainDescription";
 
 const StyledDescription = styled.div`
-  padding: 5rem 0;
+  padding: 3rem 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,13 +34,13 @@ const StyledDescription = styled.div`
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: column-reverse;
     color: gray;
 
     .upper-plank {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 2rem;
+      margin: 2rem 0;
 
       .rating {
         width: 25rem;
@@ -112,6 +112,7 @@ const StyledDescription = styled.div`
 
   @media screen and (min-width: 900px) {
     flex-direction: row;
+    padding: 5rem 0;
 
     .img-desc {
       width: 25rem;
@@ -120,6 +121,7 @@ const StyledDescription = styled.div`
     .text-desc {
       width: 40rem;
       margin-left: 5rem;
+      flex-direction: column;
 
       .links-btns {
         display: flex;
@@ -182,30 +184,31 @@ const ShowDescription = () => {
             <Button>Back</Button>
           </Link>
         </div>
-
-        <div className="upper-plank">
-          <div className="rating" style={{ color: ratingColor }}>
-            {show.show.rating?.average}
+        <div>
+          <div className="upper-plank">
+            <div className="rating" style={{ color: ratingColor }}>
+              {show.show.rating?.average}
+            </div>
           </div>
-        </div>
-        <div className="show-name">
-          <span>"{show.name}"</span>
-        </div>
-        <div className="show-numbers">
-          <span>Season: {show.season} </span>
-          <span>Ep: {show.number}</span>
-        </div>
+          <div className="show-name">
+            <span>"{show.name}"</span>
+          </div>
+          <div className="show-numbers">
+            <span>Season: {show.season} </span>
+            <span>Ep: {show.number}</span>
+          </div>
 
-        {show.summary && (
-          <div
-            className="summary"
-            dangerouslySetInnerHTML={{ __html: show.summary }}
-          />
-        )}
+          {show.summary && (
+            <div
+              className="summary"
+              dangerouslySetInnerHTML={{ __html: show.summary }}
+            />
+          )}
 
-        <div className="network-name">
-          <span>{show.show.schedule?.time}</span> {show.show.network && "on"}{" "}
-          {show.show.network?.name}
+          <div className="network-name">
+            <span>{show.show.schedule?.time}</span> {show.show.network && "on"}{" "}
+            {show.show.network?.name}
+          </div>
         </div>
         {/* <div className="links-btns">
           {show.show.officialSite && (

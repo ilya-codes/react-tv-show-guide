@@ -20,13 +20,13 @@ const StyledForm = styled.form`
   align-items: center;
 
   button {
-    margin: 2.5rem;
+    margin: 2.5rem 0;
     width: 13rem;
   }
 
   input {
     margin-top: 2.5rem;
-    width: 18rem;
+    width: 70vw;
     padding-left: 0.8rem;
     outline: none;
     height: 1.8rem;
@@ -143,10 +143,27 @@ const MoviesGrid = styled.div`
     }
   }
 
-  img {
-    display: block;
-    border-radius: 8px;
+  .img-tile {
     background-color: #000;
+    width: 75vw;
+    /* height: 28rem; */
+    height: 110vw;
+    overflow: hidden;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+
+    /* img {
+      display: block;
+
+      height: 100%;
+    } */
+
+    @media screen and (min-width: 900px) {
+      /* width: unset; */
+      width: 14rem;
+      height: 20rem;
+    }
   }
 `;
 
@@ -245,7 +262,14 @@ const Movies = ({
                       className="link"
                       key={item.id || item.show.id}
                     >
-                      <img src={item.show.image.medium} alt="" />
+                      <div
+                        className="img-tile"
+                        style={{
+                          backgroundImage: `url(${item.show.image.original}) `,
+                        }}
+                      >
+                        {/* <img src={item.show.image.original} alt="" /> */}
+                      </div>
                       <p>
                         {item.airdate && filterDate === dates.today
                           ? "Today"

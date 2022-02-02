@@ -6,7 +6,7 @@ import { useContext } from "react";
 import ShowsContext from "./ShowsContext";
 
 const StyledDescription = styled.div`
-  padding: 5rem 0;
+  padding: 3rem 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,13 +29,13 @@ const StyledDescription = styled.div`
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: column-reverse;
     color: gray;
 
     .upper-plank {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 2rem;
+      margin: 2rem 0;
 
       .rating {
         width: 25rem;
@@ -103,6 +103,7 @@ const StyledDescription = styled.div`
 
   @media screen and (min-width: 900px) {
     flex-direction: row;
+    padding: 5rem 0;
 
     .img-desc {
       width: 25rem;
@@ -111,6 +112,7 @@ const StyledDescription = styled.div`
     .text-desc {
       width: 40rem;
       margin-left: 5rem;
+      flex-direction: column;
 
       .links-btns {
         display: flex;
@@ -168,30 +170,31 @@ const ShowMainDescription = () => {
             <Button>Back</Button>
           </Link>
         </div>
-
-        <div className="upper-plank">
-          <div className="rating" style={{ color: ratingColor }}>
-            {show.show.rating?.average}
-          </div>
-          {/* <Link to="/description" className="back-btn">
+        <div>
+          <div className="upper-plank">
+            <div className="rating" style={{ color: ratingColor }}>
+              {show.show.rating?.average}
+            </div>
+            {/* <Link to="/description" className="back-btn">
             <Button>Back</Button>
           </Link> */}
-        </div>
-        <div className="show-name">{show.show.name}</div>
-        <div className="sub-info">
-          <span>{show.show.type}</span>
-          <span>Premiered: {show.show.premiered}</span>
-        </div>
-        <div
-          className="summary"
-          dangerouslySetInnerHTML={{ __html: show.show.summary }}
-        />
-        <div className="schedule">
-          <span>{show.show.schedule?.days.join(", ")}</span>{" "}
-          <span className="time">{show.show.schedule?.time}</span>
-        </div>
-        <div className="network-name">
-          {show.show.network && "On"} {show.show.network?.name}
+          </div>
+          <div className="show-name">{show.show.name}</div>
+          <div className="sub-info">
+            <span>{show.show.type}</span>
+            <span>Premiered: {show.show.premiered}</span>
+          </div>
+          <div
+            className="summary"
+            dangerouslySetInnerHTML={{ __html: show.show.summary }}
+          />
+          <div className="schedule">
+            <span>{show.show.schedule?.days.join(", ")}</span>{" "}
+            <span className="time">{show.show.schedule?.time}</span>
+          </div>
+          <div className="network-name">
+            {show.show.network && "On"} {show.show.network?.name}
+          </div>
         </div>
         {/* <div className="links-btns">
           {show.show.officialSite && (
