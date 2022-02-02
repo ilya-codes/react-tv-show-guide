@@ -155,6 +155,8 @@ const Movies = ({
         <Route path="/" exact>
           <MoviesNav>
             <SelectBtn
+              as
+              select
               value={type}
               name="type"
               placeholder="Type"
