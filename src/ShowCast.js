@@ -23,6 +23,7 @@ const StyledCast = styled.div`
       margin: 0 1.5rem 0.5rem;
       color: gray;
       font-size: 1.5rem;
+      text-align: center;
     }
 
     .back-btn {

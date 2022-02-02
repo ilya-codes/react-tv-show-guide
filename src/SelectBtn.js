@@ -14,8 +14,9 @@ const StyledSelect = styled.select`
   cursor: pointer;
   outline: none;
   transition: all 0.2s ease-in-out;
-  text-align: center;
-  text-align-last: center;
+  option {
+    text-align: center;
+  }
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.5);
