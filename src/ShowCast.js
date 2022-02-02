@@ -80,7 +80,7 @@ const CastGrid = styled.div`
     box-shadow: 0 9px 18px rgba(0, 0, 0, 0.5);
 
     .cast-img-box {
-      /* min-width: 7rem; */
+      max-width: 7.2rem;
       margin-right: 2rem;
       background-color: #000;
       border-radius: 8px;
