@@ -31,7 +31,6 @@ const StyledSelect = styled.select`
 const SelectBtn = (props) => {
   return (
     <StyledSelect
-      // defaultValue="default"
       onChange={props.onChange}
       name={props.name}
       value={props.value}

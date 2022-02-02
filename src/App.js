@@ -106,6 +106,7 @@ const App = () => {
     if (e.target.value === "All") {
       e.target.name === "type" && setFilterType("");
       e.target.name === "genre" && setFilterGenre("");
+      e.target.name === "country" && setCountry("US");
     }
   };
 
@@ -119,9 +120,12 @@ const App = () => {
       />
       <Header />
       <Movies
+        dates={dates}
+        filterDate={filterDate}
         isLoading={isLoading}
         type={filterType}
         genre={filterGenre}
+        country={country}
         search={search}
         handleSearch={searchHandler}
         handleSubmit={submitHandler}

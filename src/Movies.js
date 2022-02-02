@@ -76,9 +76,23 @@ const StyledMain = styled.main`
     }
   }
 
+  .shows-count {
+    margin: 1.5rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    color: #667eea;
+    border-bottom: 1px solid gray;
+  }
+
   @media screen and (min-width: 900px) {
     .replacer {
       margin-top: 8rem;
+    }
+
+    .shows-count {
+      margin: 1.5rem 3.6rem;
+      text-align: start;
     }
   }
 `;
@@ -137,9 +151,12 @@ const MoviesGrid = styled.div`
 `;
 
 const Movies = ({
+  dates,
+  filterDate,
   isLoading,
   type,
   genre,
+  country,
   search,
   handleSearch,
   handleSubmit,
@@ -187,7 +204,12 @@ const Movies = ({
               <option value="Adventure">Adventure</option>
             </SelectBtn>
 
-            <SelectBtn placeholder="Country" onChange={handleCountry}>
+            <SelectBtn
+              value={country}
+              name="country"
+              // placeholder="Country"
+              onChange={handleCountry}
+            >
               <option value="US">US</option>
               <option value="GB">UK</option>
               <option value="RU">Russia</option>
@@ -200,6 +222,9 @@ const Movies = ({
               <Button type="submit">Search</Button>
             </StyledForm>
           </MoviesNav>
+          {showMovies.length > 0 && (
+            <div className="shows-count">{showMovies.length} found</div>
+          )}
 
           {isLoading ? (
             <Loader />
@@ -222,8 +247,9 @@ const Movies = ({
                     >
                       <img src={item.show.image.medium} alt="" />
                       <p>
-                        {(item.airdate && "Today") ||
-                          item.show.schedule.days.join(", ")}{" "}
+                        {item.airdate && filterDate === dates.today
+                          ? "Today"
+                          : "Tomorrow"}{" "}
                         <span className="accentend-info">
                           {item.airtime || item.show.schedule.time}
                         </span>{" "}
