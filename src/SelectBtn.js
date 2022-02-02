@@ -16,9 +16,6 @@ const StyledSelect = styled.select`
   outline: none;
   transition: all 0.2s ease-in-out;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   &:hover {
     background-color: rgba(255, 255, 255, 0.5);
   }

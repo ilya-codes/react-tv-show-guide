@@ -154,6 +154,8 @@ const Movies = ({
       <Switch>
         <Route path="/" exact>
           <MoviesNav>
+            <SelectBtn placeholder="hello">inner</SelectBtn>
+
             <SelectBtn
               value={type}
               name="type"
