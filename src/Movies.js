@@ -89,10 +89,6 @@ const MoviesNav = styled.div`
   flex-flow: column-reverse wrap;
   align-items: center;
 
-  select {
-    text-align: center;
-  }
-
   @media screen and (min-width: 900px) {
     max-width: 75rem;
     margin: 2rem auto;
@@ -158,7 +154,7 @@ const Movies = ({
       <Switch>
         <Route path="/" exact>
           <MoviesNav>
-            <select
+            <SelectBtn
               as
               select
               value={type}
@@ -174,7 +170,7 @@ const Movies = ({
               <option value="Reality">Reality</option>
               <option value="News">News</option>
               <option value="Sports">Sports</option>
-            </select>
+            </SelectBtn>
 
             <SelectBtn
               value={genre}
