@@ -145,7 +145,7 @@ const MoviesGrid = styled.div`
 
   .img-tile {
     background-color: #000;
-    width: 75vw;
+    width: 70vw;
     /* height: 28rem; */
     height: 110vw;
     overflow: hidden;
