@@ -27,7 +27,6 @@ const StyedActor = styled.div`
     flex-direction: column-reverse;
 
     .actor-info {
-      width: 20rem;
       display: flex;
       flex-direction: column;
       color: #fff;
@@ -73,8 +72,10 @@ const StyedActor = styled.div`
     }
     .actor-box {
       flex-direction: row;
+
       .actor-info {
         margin: 0 3rem;
+        width: 20rem;
       }
     }
   }
