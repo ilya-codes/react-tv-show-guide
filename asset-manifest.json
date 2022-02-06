@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/tv-show-guide/static/css/main.861ad2c1.chunk.css",
-    "main.js": "/tv-show-guide/static/js/main.9f3be4ea.chunk.js",
-    "main.js.map": "/tv-show-guide/static/js/main.9f3be4ea.chunk.js.map",
-    "runtime-main.js": "/tv-show-guide/static/js/runtime-main.3e5bfc8d.js",
-    "runtime-main.js.map": "/tv-show-guide/static/js/runtime-main.3e5bfc8d.js.map",
-    "static/js/2.ff0981ce.chunk.js": "/tv-show-guide/static/js/2.ff0981ce.chunk.js",
-    "static/js/2.ff0981ce.chunk.js.map": "/tv-show-guide/static/js/2.ff0981ce.chunk.js.map",
-    "index.html": "/tv-show-guide/index.html",
-    "static/css/main.861ad2c1.chunk.css.map": "/tv-show-guide/static/css/main.861ad2c1.chunk.css.map",
-    "static/js/2.ff0981ce.chunk.js.LICENSE.txt": "/tv-show-guide/static/js/2.ff0981ce.chunk.js.LICENSE.txt"
+    "main.css": "/react-tv-show-guide/static/css/main.861ad2c1.chunk.css",
+    "main.js": "/react-tv-show-guide/static/js/main.9f3be4ea.chunk.js",
+    "main.js.map": "/react-tv-show-guide/static/js/main.9f3be4ea.chunk.js.map",
+    "runtime-main.js": "/react-tv-show-guide/static/js/runtime-main.37440d72.js",
+    "runtime-main.js.map": "/react-tv-show-guide/static/js/runtime-main.37440d72.js.map",
+    "static/js/2.429b9755.chunk.js": "/react-tv-show-guide/static/js/2.429b9755.chunk.js",
+    "static/js/2.429b9755.chunk.js.map": "/react-tv-show-guide/static/js/2.429b9755.chunk.js.map",
+    "index.html": "/react-tv-show-guide/index.html",
+    "static/css/main.861ad2c1.chunk.css.map": "/react-tv-show-guide/static/css/main.861ad2c1.chunk.css.map",
+    "static/js/2.429b9755.chunk.js.LICENSE.txt": "/react-tv-show-guide/static/js/2.429b9755.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.3e5bfc8d.js",
-    "static/js/2.ff0981ce.chunk.js",
+    "static/js/runtime-main.37440d72.js",
+    "static/js/2.429b9755.chunk.js",
     "static/css/main.861ad2c1.chunk.css",
     "static/js/main.9f3be4ea.chunk.js"
   ]
