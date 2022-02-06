@@ -1,6 +1,6 @@
 {
   "name": "movies-app",
-  "homepage": "https://ilya-codes.github.io/tv-show-guide",
+  "homepage": "https://ilya-codes.github.io/react-tv-show-guide",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
