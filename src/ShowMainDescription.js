@@ -76,7 +76,6 @@ const StyledDescription = styled.div`
     }
 
     .network-name {
-      /* margin-bottom: 2rem; */
       margin: 2rem 0;
     }
 
@@ -137,8 +136,6 @@ const ShowMainDescription = () => {
   const context = useContext(ShowsContext);
   const show = context.clickedShow;
 
-  // const showDescription = JSON.parse(window.localStorage.getItem("savedShow"));
-
   let ratingColor =
     show.show.rating?.average < 3
       ? "red"
@@ -175,9 +172,6 @@ const ShowMainDescription = () => {
             <div className="rating" style={{ color: ratingColor }}>
               {show.show.rating?.average}
             </div>
-            {/* <Link to="/description" className="back-btn">
-            <Button>Back</Button>
-          </Link> */}
           </div>
           <div className="show-name">{show.show.name}</div>
           <div className="sub-info">
@@ -196,17 +190,6 @@ const ShowMainDescription = () => {
             {show.show.network && "On"} {show.show.network?.name}
           </div>
         </div>
-        {/* <div className="links-btns">
-          {show.show.officialSite && (
-            <Button>
-              <a href={show.show.officialSite}>To Website</a>
-            </Button>
-          )}
-
-          <Link to="/description/cast">
-            <Button>Cast</Button>
-          </Link>
-        </div> */}
       </div>
     </StyledDescription>
   );

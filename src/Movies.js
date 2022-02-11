@@ -31,7 +31,6 @@ const StyledForm = styled.form`
     outline: none;
     height: 1.8rem;
     border-radius: 10px;
-    /* border: 1px solid rgba(255, 255, 255, 0.3); */
     border: 1px solid #667eeab5;
     background-color: transparent;
     color: #fff;
@@ -123,7 +122,6 @@ const MoviesGrid = styled.div`
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
@@ -146,21 +144,13 @@ const MoviesGrid = styled.div`
   .img-tile {
     background-color: #000;
     width: 70vw;
-    /* height: 28rem; */
     height: 110vw;
     overflow: hidden;
     border-radius: 8px;
     background-size: cover;
     background-position: center;
 
-    /* img {
-      display: block;
-
-      height: 100%;
-    } */
-
-    @media screen and (min-width: 900px) {
-      /* width: unset; */
+    @media screen and (min-width: 550px) {
       width: 14rem;
       height: 20rem;
     }
@@ -221,12 +211,7 @@ const Movies = ({
               <option value="Adventure">Adventure</option>
             </SelectBtn>
 
-            <SelectBtn
-              value={country}
-              name="country"
-              // placeholder="Country"
-              onChange={handleCountry}
-            >
+            <SelectBtn value={country} name="country" onChange={handleCountry}>
               <option value="US">US</option>
               <option value="GB">UK</option>
               <option value="RU">Russia</option>
@@ -267,9 +252,7 @@ const Movies = ({
                         style={{
                           backgroundImage: `url(${item.show.image.original}) `,
                         }}
-                      >
-                        {/* <img src={item.show.image.original} alt="" /> */}
-                      </div>
+                      ></div>
                       <p>
                         {item.airdate && filterDate === dates.today
                           ? "Today"

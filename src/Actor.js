@@ -12,7 +12,6 @@ const StyedActor = styled.div`
   flex-direction: column;
 
   .back-btn {
-    /* margin-left: auto; */
     align-self: center;
     margin-bottom: 2rem;
 
@@ -61,7 +60,6 @@ const StyedActor = styled.div`
       .replacer {
         width: 100%;
         height: 20rem;
-        /* background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
       }
     }
   }

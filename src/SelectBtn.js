@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledSelect = styled.select`
-  /* width: 13rem; */
   width: 10rem;
   margin: 0.8rem;
   height: 1.8rem;
@@ -22,9 +21,6 @@ const StyledSelect = styled.select`
   }
 
   @media screen and (min-width: 900px) {
-    /* width: 9rem; */
-    /* width: 10rem; */
-
     margin: 1.5rem;
   }
 `;
@@ -37,7 +33,6 @@ const SelectBtn = (props) => {
       value={props.value}
     >
       <option hidden>{props.placeholder}</option>
-
       {props.children}
     </StyledSelect>
   );

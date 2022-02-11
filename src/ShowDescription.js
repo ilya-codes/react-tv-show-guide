@@ -1,14 +1,9 @@
 import React from "react";
-// import { useContext } from "react";
-// import ShowsContext from "./ShowsContext";
-// import { Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Button from "./Button";
 import styled from "styled-components";
 import { useContext } from "react";
 import ShowsContext from "./ShowsContext";
-
-// import ShowMainDescription from "./ShowMainDescription";
 
 const StyledDescription = styled.div`
   padding: 3rem 0 0 0;
@@ -55,10 +50,6 @@ const StyledDescription = styled.div`
       justify-content: space-between;
     }
 
-    /* button {
-      margin: 0;
-    } */
-
     .summary {
       text-align: justify;
       margin: 3rem 0;
@@ -85,7 +76,6 @@ const StyledDescription = styled.div`
     }
 
     .network-name {
-      /* margin-bottom: 2rem; */
       margin: 2rem 0;
     }
 
@@ -146,9 +136,6 @@ const StyledDescription = styled.div`
 const ShowDescription = () => {
   const context = useContext(ShowsContext);
   const show = context.clickedShow;
-  // const [showDescription, setShowDescription] = useState(context.clickedShow);
-
-  // let showDescription = JSON.parse(window.localStorage.getItem("savedShow"));
 
   let ratingColor =
     show.show.rating?.average < 3
@@ -210,20 +197,6 @@ const ShowDescription = () => {
             {show.show.network?.name}
           </div>
         </div>
-        {/* <div className="links-btns">
-          {show.show.officialSite && (
-            <Button>
-              <a href={show.show.officialSite}>To Website</a>
-            </Button>
-          )}
-          <Button>
-            <Link to="/description/show">About Show</Link>
-          </Button>
-
-          <Link to="/description/cast">
-            <Button>Cast</Button>
-          </Link>
-        </div> */}
       </div>
     </StyledDescription>
   );

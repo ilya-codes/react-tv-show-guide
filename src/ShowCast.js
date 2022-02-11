@@ -132,14 +132,7 @@ const ShowCast = () => {
   const [isLoading, setIsLoading] = useState(true);
   let history = useHistory();
   const context = useContext(ShowsContext);
-
-  // const showName = JSON.parse(window.localStorage.getItem("savedShow")).show
-  //   .name;
-
   const showName = context.clickedShow.show.name;
-  // context.clickedShow.show.name ||
-
-  // const showId = context.clickedShow.show.id;
   const showId = JSON.parse(window.localStorage.getItem("savedShow")).show.id;
 
   useEffect(() => {

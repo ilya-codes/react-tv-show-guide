@@ -24,29 +24,11 @@ export const ShowsContextProvider = (props) => {
     setActorId(id);
   };
 
-  // const resetHandler = () => {
-  //   console.log("reset");
-  //   if (location.pathname === "/") {
-  //     history.goBack();
-  //   } else {
-  //     history.push("/");
-  //   }
-  // };
-
-  // const [selectedOption, setSelectedOption] = useState(null);
-
-  // const selectHandler = (item) => {
-  //   setSelectedOption(item);
-  // };
-  // console.log(selectedOption);
-
   const context = {
     clickedShow: showSave,
     clickedActor: actorId,
     handleShowSave: showSaveHander,
     handleActor: actorHandler,
-    // option: selectedOption,
-    // setOption: selectHandler,
   };
 
   return (
