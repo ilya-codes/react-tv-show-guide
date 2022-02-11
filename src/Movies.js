@@ -43,7 +43,7 @@ const StyledForm = styled.form`
 
   @media screen and (min-width: 900px) {
     margin: 1.5rem;
-    margin-left: auto;
+    margin-right: auto;
     flex-direction: row;
 
     button {
