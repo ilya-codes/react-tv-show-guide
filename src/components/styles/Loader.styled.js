@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-const Spinner = styled.div`
+export const StyledLoader = styled.div`
   margin-top: 5rem;
   display: flex;
   justify-content: center;
@@ -49,18 +48,3 @@ const Spinner = styled.div`
     margin-top: 8rem;
   }
 `;
-
-const Loader = () => {
-  return (
-    <Spinner>
-      <div className="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </Spinner>
-  );
-};
-
-export default Loader;

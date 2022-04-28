@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import { HashRouter as Router } from "react-router-dom";
-import { ShowsContextProvider } from "./ShowsContext";
-import ScrollToView from "./ScrollToView";
+import { ShowsContextProvider } from "./components/ShowsContext";
+import ScrollToView from "./components/ScrollToView";
 
 ReactDOM.render(
   <React.StrictMode>

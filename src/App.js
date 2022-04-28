@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import Navigation from "./Navigation";
-import Header from "./Header";
-import Movies from "./Movies";
-import Footer from "./Footer";
-import ScrollToTop from "./ScrollToTop";
+import Navigation from "./components/Navigation";
+import Header from "./components/Header";
+import Shows from "./components/Shows";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import GlobalStyles from "./components/styles/Global";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -43,6 +44,32 @@ const App = () => {
     setFilterDate(dates.today);
   };
 
+  const searchHandler = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    setQuery(search);
+    setSearch("");
+  };
+
+  const countryHandler = (e) => {
+    setCountry(e.target.value);
+    setIsLoading(true);
+  };
+
+  const filterHandler = (e) => {
+    e.target.name === "type" && setFilterType(e.target.value);
+    e.target.name === "genre" && setFilterGenre(e.target.value);
+
+    if (e.target.value === "All") {
+      e.target.name === "type" && setFilterType("");
+      e.target.name === "genre" && setFilterGenre("");
+      e.target.name === "country" && setCountry("US");
+    }
+  };
+
   useEffect(() => {
     const initialDataFetcher = async () => {
       try {
@@ -62,21 +89,6 @@ const App = () => {
     };
     initialDataFetcher();
   }, [country, filterDate]);
-
-  const searchHandler = (e) => {
-    setSearch(e.target.value);
-  };
-
-  const submitHandler = (e) => {
-    e.preventDefault();
-    setQuery(search);
-    setSearch("");
-  };
-
-  const countryHandler = (e) => {
-    setCountry(e.target.value);
-    setIsLoading(true);
-  };
 
   useEffect(() => {
     const result = movies
@@ -99,43 +111,35 @@ const App = () => {
     setShowMovies(result);
   }, [filterType, filterGenre, movies, query]);
 
-  const filterHandler = (e) => {
-    e.target.name === "type" && setFilterType(e.target.value);
-    e.target.name === "genre" && setFilterGenre(e.target.value);
-
-    if (e.target.value === "All") {
-      e.target.name === "type" && setFilterType("");
-      e.target.name === "genre" && setFilterGenre("");
-      e.target.name === "country" && setCountry("US");
-    }
-  };
-
   return (
-    <div className="App">
-      <Navigation
-        handleReset={resetHandler}
-        dates={dates}
-        filterDate={filterDate}
-        filterDateHandler={filterDateHandler}
-      />
-      <Header />
-      <Movies
-        dates={dates}
-        filterDate={filterDate}
-        isLoading={isLoading}
-        type={filterType}
-        genre={filterGenre}
-        country={country}
-        search={search}
-        handleSearch={searchHandler}
-        handleSubmit={submitHandler}
-        showMovies={showMovies}
-        handleFilter={filterHandler}
-        handleCountry={countryHandler}
-      />
+    <>
+      <GlobalStyles />
       <ScrollToTop />
-      <Footer />
-    </div>
+      <div className="App">
+        <Navigation
+          handleReset={resetHandler}
+          dates={dates}
+          filterDate={filterDate}
+          filterDateHandler={filterDateHandler}
+        />
+        <Header />
+        <Shows
+          dates={dates}
+          filterDate={filterDate}
+          isLoading={isLoading}
+          type={filterType}
+          genre={filterGenre}
+          country={country}
+          search={search}
+          handleSearch={searchHandler}
+          handleSubmit={submitHandler}
+          showMovies={showMovies}
+          handleFilter={filterHandler}
+          handleCountry={countryHandler}
+        />
+        <Footer />
+      </div>
+    </>
   );
 };
 

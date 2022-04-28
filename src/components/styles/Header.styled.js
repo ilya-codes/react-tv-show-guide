@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-const Hero = styled.header`
+export const StyledHeader = styled.header`
   width: 100%;
   height: 7rem;
   padding-top: 5rem;
@@ -16,9 +15,3 @@ const Hero = styled.header`
     height: 5rem;
   }
 `;
-
-const Header = () => {
-  return <Hero></Hero>;
-};
-
-export default Header;

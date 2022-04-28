@@ -1,11 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Button from "./Button";
 import styled from "styled-components";
-import { useContext } from "react";
-import ShowsContext from "./ShowsContext";
 
-const StyledDescription = styled.div`
+export const StyledMainDescription = styled.div`
   padding: 3rem 0 0 0;
   display: flex;
   flex-direction: column;
@@ -132,67 +127,3 @@ const StyledDescription = styled.div`
     }
   }
 `;
-const ShowMainDescription = () => {
-  const context = useContext(ShowsContext);
-  const show = context.clickedShow;
-
-  let ratingColor =
-    show.show.rating?.average < 3
-      ? "red"
-      : show.show.rating?.average < 5
-      ? "orange"
-      : show.show.rating?.average < 8
-      ? "yellow"
-      : "green";
-
-  return (
-    <StyledDescription>
-      <div className="img-desc">
-        <img src={show.show.image?.original} alt="" />
-      </div>
-
-      <div className="text-desc">
-        <div className="links-btns">
-          {show.show.officialSite && (
-            <a href={show.show.officialSite}>
-              <Button>To Website</Button>
-            </a>
-          )}
-
-          <Link to="/description/cast">
-            <Button>Cast</Button>
-          </Link>
-
-          <Link to="/description" className="back-btn">
-            <Button>Back</Button>
-          </Link>
-        </div>
-        <div>
-          <div className="upper-plank">
-            <div className="rating" style={{ color: ratingColor }}>
-              {show.show.rating?.average}
-            </div>
-          </div>
-          <div className="show-name">{show.show.name}</div>
-          <div className="sub-info">
-            <span>{show.show.type}</span>
-            <span>Premiered: {show.show.premiered}</span>
-          </div>
-          <div
-            className="summary"
-            dangerouslySetInnerHTML={{ __html: show.show.summary }}
-          />
-          <div className="schedule">
-            <span>{show.show.schedule?.days.join(", ")}</span>{" "}
-            <span className="time">{show.show.schedule?.time}</span>
-          </div>
-          <div className="network-name">
-            {show.show.network && "On"} {show.show.network?.name}
-          </div>
-        </div>
-      </div>
-    </StyledDescription>
-  );
-};
-
-export default ShowMainDescription;

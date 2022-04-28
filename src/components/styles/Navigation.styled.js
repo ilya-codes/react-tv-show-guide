@@ -1,8 +1,6 @@
-import React from "react";
 import styled from "styled-components";
-import Logo from "./Logo";
 
-const Navbar = styled.nav`
+export const StyledNavbar = styled.nav`
   position: fixed;
   top: 0;
   height: 7rem;
@@ -43,15 +41,3 @@ const Navbar = styled.nav`
     }
   }
 `;
-
-const Navigation = ({ handleReset, dates, filterDate, filterDateHandler }) => {
-  return (
-    <Navbar>
-      <Logo handleReset={handleReset} />
-      <button onClick={filterDateHandler}>{`On Air 
-      ${filterDate === dates.today ? "Today" : "Tomorrow"}`}</button>
-    </Navbar>
-  );
-};
-
-export default Navigation;
