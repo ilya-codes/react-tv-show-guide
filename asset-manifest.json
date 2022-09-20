@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/react-tv-show-guide/static/js/main.265c0bee.chunk.js",
-    "main.js.map": "/react-tv-show-guide/static/js/main.265c0bee.chunk.js.map",
+    "main.js": "/react-tv-show-guide/static/js/main.10cc5877.chunk.js",
+    "main.js.map": "/react-tv-show-guide/static/js/main.10cc5877.chunk.js.map",
     "runtime-main.js": "/react-tv-show-guide/static/js/runtime-main.37440d72.js",
     "runtime-main.js.map": "/react-tv-show-guide/static/js/runtime-main.37440d72.js.map",
     "static/js/2.32105d73.chunk.js": "/react-tv-show-guide/static/js/2.32105d73.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.37440d72.js",
     "static/js/2.32105d73.chunk.js",
-    "static/js/main.265c0bee.chunk.js"
+    "static/js/main.10cc5877.chunk.js"
   ]
 }
